@@ -1,0 +1,122 @@
+:root {
+    --primary-background-color: #121212;
+    --secondary-background-color: #272727;
+    --font: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 20px auto;
+    font-family: var(--font);
+    color: var(--color);
+    background-color: var(--primary-background-color);
+    max-width: 1300px;
+}
+
+button {
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+    color: white;
+    background-color: rgb(19, 19, 19);
+    border-radius: 1px;
+
+    border: 0px;
+}
+
+button:hover,
+#decimal:hover,
+#change-sign:hover {
+    background-color: rgb(52, 52, 52);
+}
+
+#equals {
+    background-color: rgb(117, 58, 23);
+}
+
+#equals.clicked,
+#equals.clicked:hover {
+    background-color: rgb(225, 115, 13);
+}
+
+#equals:hover {
+    background-color: rgb(225, 92, 13);
+}
+
+.buttons {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    width: 330px;
+
+    justify-items: center;
+    align-items: center;
+
+    gap: 2px;
+}
+
+.calculator {
+    display: grid;
+    flex: 1 1 0;
+
+    grid-template-rows: 1.5fr 3fr;
+
+    height: 500px;
+    max-width: 330px;
+    min-width: 300px;
+    border-radius: 1px;
+    background-color: rgb(31, 31, 31);
+
+    gap: 2px;
+    padding: 4px;
+}
+
+.display {
+    display: grid;
+    grid-template-rows: 1fr 1.5fr;
+}
+
+.entry {
+    font-size: 50px;
+}
+
+.entry, .log {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.function.disabled,
+.operator.disabled {
+    color: var(--secondary-background-color);
+    pointer-events: none;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.number,
+#decimal,
+#change-sign {
+    font-weight: bold;
+    background-color: rgb(6, 6, 6);
+}
+
+.return {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+
+button.clicked,
+#decimal.clicked,
+#change-sign.clicked {
+    background-color: rgb(83, 83, 83);
+}
